@@ -51,5 +51,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'coffee-script-source', '1.8.0'
+group :development, :test do
+  gem 'coffee-script-source', '1.8.0'
+end
 gem 'cat_api', '~> 0.1.0'
