@@ -12,13 +12,3 @@
  *= require_tree .
  */
  
-body{
-	background:#E9E6E7;
-}
-
-h1{
-    text-align:center;
-    color: #090637;
-    margin: 0;
-    font-size:5em;
-}
