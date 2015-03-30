@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @commenter.name %>
+</p>
+
+<p>
+  <strong>Comment:</strong>
+  <%= @commenter.comment %>
+</p>
+
+<p>
+  <strong>Has cat:</strong>
+  <%= @commenter.has_cat %>
+</p>
+
+<p>
+  <strong>Created:</strong>
+  <%= @commenter.created %>
+</p>
+
+<%= link_to 'Edit', edit_commenter_path(@commenter) %> |
+<%= link_to 'Back', commenters_path %>

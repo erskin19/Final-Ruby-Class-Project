@@ -1,0 +1,33 @@
+<h1>Listing commenters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
+      <th>Has cat</th>
+      <th>Created</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @commenters.each do |commenter| %>
+      <tr>
+        <td><%= commenter.name %></td>
+        <td><%= commenter.comment %></td>
+        <td><%= commenter.has_cat %></td>
+        <td><%= commenter.created %></td>
+        <td><%= link_to 'Show', commenter %></td>
+        <td><%= link_to 'Edit', edit_commenter_path(commenter) %></td>
+        <td><%= link_to 'Destroy', commenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Commenter', new_commenter_path %>

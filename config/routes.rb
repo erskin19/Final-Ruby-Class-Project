@@ -1,4 +1,6 @@
 HelloWorld::Application.routes.draw do
+  resources :commenters
+
   root "static#home"
   get "/about" => "static#about"
   get '/cat-pictures(/:number_of_cats)' => 'static#cats', as: :cat_pictures
