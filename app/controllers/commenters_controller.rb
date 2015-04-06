@@ -1,6 +1,7 @@
 class CommentersController < ApplicationController
+  before_action :only_allow_signed_in_users, except: [:index, :show]
   before_action :set_commenter, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /commenters
   # GET /commenters.json
   def index

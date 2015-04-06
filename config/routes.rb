@@ -1,5 +1,8 @@
 HelloWorld::Application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
   resources :commenters
+  get '/sign-in' => 'sessions#new', as: :sign_in
+  delete '/sign-out' => 'sessions#destroy', as: :sign_out
 
   root "static#home"
   get "/about" => "static#about"
