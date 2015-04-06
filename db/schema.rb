@@ -11,13 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150330065143) do
+ActiveRecord::Schema.define(version: 20150406145253) do
 
   create_table "commenters", force: true do |t|
     t.string   "name"
     t.text     "comment"
     t.boolean  "has_cat"
-    t.datetime "created"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

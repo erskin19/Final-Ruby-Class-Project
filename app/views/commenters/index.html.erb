@@ -6,7 +6,6 @@
       <th>Name</th>
       <th>Comment</th>
       <th>Has cat</th>
-      <th>Created</th>
       <th></th>
       <th></th>
       <th></th>
@@ -19,7 +18,6 @@
         <td><%= commenter.name %></td>
         <td><%= commenter.comment %></td>
         <td><%= commenter.has_cat %></td>
-        <td><%= commenter.created %></td>
         <td><%= link_to 'Show', commenter %></td>
         <td><%= link_to 'Edit', edit_commenter_path(commenter) %></td>
         <td><%= link_to 'Destroy', commenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
