@@ -29,5 +29,6 @@
 </table>
 
 <br>
-
-<%= link_to 'New Commenter', new_commenter_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Commenter', new_commenter_path %>
+<% end %>
