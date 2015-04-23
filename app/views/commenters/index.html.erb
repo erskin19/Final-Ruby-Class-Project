@@ -19,13 +19,16 @@
         <td><%= commenter.comment %></td>
         <td><%= commenter.has_cat %></td>
         <td><%= link_to 'Show', commenter %></td>
-        <td><%= link_to 'Edit', edit_commenter_path(commenter) %></td>
-        <td><%= link_to 'Destroy', commenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<% if user_signed_in? %>
+          <td><%= link_to 'Edit', edit_commenter_path(commenter) %></td>
+          <td><%= link_to 'Destroy', commenter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Commenter', new_commenter_path %>
+<% if user_signed_in? %>
+  <%= link_to 'New Commenter', new_commenter_path %>
+<% end %>
