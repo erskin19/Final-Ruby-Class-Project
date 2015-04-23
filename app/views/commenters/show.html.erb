@@ -14,6 +14,7 @@
   <strong>Has cat:</strong>
   <%= @commenter.has_cat %>
 </p>
-
-<%= link_to 'Edit', edit_commenter_path(@commenter) %> |
+<% if user_signed_in? %>
+  <%= link_to 'Edit', edit_commenter_path(@commenter) %> |
+<% end %>
 <%= link_to 'Back', commenters_path %>
