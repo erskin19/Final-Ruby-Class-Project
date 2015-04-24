@@ -1,6 +1,11 @@
 HelloWorld::Application.routes.draw do
+
+  get '/comments/new/:pet_id' => 'comments#new', as: :new_comment_for_pet
+  resources :comments
+  
+  resources :pets
+
   resources :sessions, only: [:new, :create, :destroy]
-  resources :commenters
   get '/sign-in' => 'sessions#new', as: :sign_in
   delete '/sign-out' => 'sessions#destroy', as: :sign_out
 
