@@ -56,3 +56,6 @@ group :development, :test do
   gem 'coffee-script-source', '1.8.0'
 end
 gem 'cat_api', '~> 0.1.0'
+
+## Gemfile for Rails 3+, Sinatra, and Merb
+gem 'will_paginate', '~> 3.0.6'

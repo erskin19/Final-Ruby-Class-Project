@@ -30,6 +30,7 @@
 </table>
 
 <br>
+<%= will_paginate @pets %>
 <% if user_signed_in? %>
   <%= link_to 'New Pet', new_pet_path %>
 <% end %>
